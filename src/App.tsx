@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import ListView from './pages/ListView';
+import GalleryView from './pages/GalleryView';
+import DetailView from './pages/DetailView';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <BrowserRouter>
+      <header className="app-header">
+        <h1>MP2</h1>
+        <nav>
+          <Link to="/">List</Link>
+          <span> | </span>
+          <Link to="/gallery">Gallery</Link>
+        </nav>
       </header>
-    </div>
+      <Routes>
+        <Route path="/" element={<ListView />} />
+        <Route path="/gallery" element={<GalleryView />} />
+        <Route path="/detail/:name" element={<DetailView />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
