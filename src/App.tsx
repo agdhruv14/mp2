@@ -7,7 +7,7 @@ import DetailView from './pages/DetailView';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/mp2">
       <header className="app-header">
         <h1>MP2</h1>
         <nav>
