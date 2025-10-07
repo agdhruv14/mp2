@@ -19,7 +19,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<ListView />} />
         <Route path="/gallery" element={<GalleryView />} />
-        <Route path="../detail/:name" element={<DetailView />} />
+        <Route path="/detail/:name" element={<DetailView />} />
       </Routes>
     </BrowserRouter>
   );
