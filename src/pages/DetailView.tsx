@@ -26,8 +26,8 @@ export default function DetailView() {
       <div>Height: {p.height}</div>
       <div>Weight: {p.weight}</div>
       <div>Types: {p.types.map((t:any)=>t.type.name).join(', ')}</div>
-      <button disabled={!prev} onClick={()=>nav(`/detail/${prev}`)}>Previous</button>
-      <button disabled={!next} onClick={()=>nav(`/detail/${next}`)}>Next</button>
+  <button disabled={!prev} onClick={()=>nav(`../detail/${prev}`)}>Previous</button>
+  <button disabled={!next} onClick={()=>nav(`../detail/${next}`)}>Next</button>
     </div>
   );
 }

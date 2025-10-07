@@ -21,7 +21,7 @@ export default function GalleryView(){
       <div style={{display:'flex',flexWrap:'wrap'}}>
         {shown.map((p:any)=>(
           <div key={p.name} style={{width:120,margin:8}}>
-            <Link to={`/detail/${p.name}`}><img src={p.sprites.front_default||''} alt={p.name} style={{width:100}} /></Link>
+            <Link to={`detail/${p.name}`}><img src={p.sprites.front_default||''} alt={p.name} style={{width:100}} /></Link>
             <div>{p.name}</div>
           </div>
         ))}

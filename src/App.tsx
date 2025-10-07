@@ -13,7 +13,7 @@ export default function App() {
         <nav>
           <Link to="/">List</Link>
           <span> | </span>
-          <Link to="/gallery">Gallery</Link>
+          <Link to="gallery">Gallery</Link>
         </nav>
       </header>
       <Routes>

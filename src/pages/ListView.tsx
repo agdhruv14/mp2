@@ -3,7 +3,7 @@ import {searchPokemon, PokemonSummaryWithId, PokemonSummary} from '../api';
 import {Link} from 'react-router-dom';
 
 export default function ListView() {
-    
+
   const [items, setItems] = useState<PokemonSummaryWithId[]>([]);
   const [q, setQ] = useState('');
   const [sortField, setSortField] = useState<'name' | 'id'>('name');
@@ -57,7 +57,7 @@ export default function ListView() {
       <ul style={{ listStyle: 'none', padding: 0 }}>
         {sorted.map((p) => (
           <li key={p.name} style={{ padding: '6px 0' }}>
-            <Link to={`/detail/${p.name}`}>{`${p.id} — ${p.name}`}</Link>
+              <Link to={`detail/${p.name}`}>{`${p.id} — ${p.name}`}</Link>
           </li>
         ))}
       </ul>
